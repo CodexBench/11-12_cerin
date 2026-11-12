@@ -1,0 +1,465 @@
+{
+  "generated_at": "2026-11-12T10:02:49.643+00:00",
+  "experiment_id": "week4-when-what-pilot-1x8",
+  "planned_runs": 8,
+  "stored_runs": 8,
+  "evaluated_runs": 6,
+  "resolved_runs": 6,
+  "resolved_rate_among_evaluated": 1.0,
+  "budget_exceeded_runs": 2,
+  "when": {
+    "full": {
+      "off": {
+        "condition_id": "full_off",
+        "metadata": {
+          "families": "when,what",
+          "documentation_level": "full",
+          "instructions": "none"
+        },
+        "status": "completed",
+        "outcome_kind": "normal_success",
+        "resolved": true,
+        "duration_seconds": 184.366,
+        "effective_tokens": 37066,
+        "behavior": {
+          "agent_message_count": 6,
+          "command_count": 11,
+          "failed_command_count": 3,
+          "file_change_count": 2,
+          "test_command_count": 3
+        },
+        "error": null,
+        "run_id": "sympy__sympy-20590--full_off--r1--067ef35aca55"
+      },
+      "on": {
+        "condition_id": "full_on",
+        "metadata": {
+          "families": "when,what",
+          "documentation_level": "full",
+          "instructions": "combined"
+        },
+        "status": "failed",
+        "outcome_kind": "budget_exceeded",
+        "resolved": null,
+        "duration_seconds": 201.167,
+        "effective_tokens": 59535,
+        "behavior": {
+          "agent_message_count": 6,
+          "command_count": 20,
+          "failed_command_count": 2,
+          "file_change_count": 2,
+          "test_command_count": 7
+        },
+        "error": "BudgetExceededError: token budget exceeded: 59535 > 50000",
+        "run_id": "sympy__sympy-20590--full_on--r1--c3626852bd5d"
+      }
+    },
+    "partial": {
+      "off": {
+        "condition_id": "partial_off",
+        "metadata": {
+          "families": "when",
+          "documentation_level": "partial",
+          "instructions": "none"
+        },
+        "status": "completed",
+        "outcome_kind": "normal_success",
+        "resolved": true,
+        "duration_seconds": 211.437,
+        "effective_tokens": 34514,
+        "behavior": {
+          "agent_message_count": 6,
+          "command_count": 11,
+          "failed_command_count": 2,
+          "file_change_count": 1,
+          "test_command_count": 7
+        },
+        "error": null,
+        "run_id": "sympy__sympy-20590--partial_off--r1--c6306df4a157"
+      },
+      "on": {
+        "condition_id": "partial_on",
+        "metadata": {
+          "families": "when",
+          "documentation_level": "partial",
+          "instructions": "combined"
+        },
+        "status": "completed",
+        "outcome_kind": "normal_success",
+        "resolved": true,
+        "duration_seconds": 121.569,
+        "effective_tokens": 27389,
+        "behavior": {
+          "agent_message_count": 4,
+          "command_count": 8,
+          "failed_command_count": 2,
+          "file_change_count": 2,
+          "test_command_count": 4
+        },
+        "error": null,
+        "run_id": "sympy__sympy-20590--partial_on--r1--077b0697b1c9"
+      }
+    },
+    "sparse": {
+      "off": {
+        "condition_id": "sparse_off",
+        "metadata": {
+          "families": "when",
+          "documentation_level": "sparse",
+          "instructions": "none"
+        },
+        "status": "failed",
+        "outcome_kind": "budget_exceeded",
+        "resolved": null,
+        "duration_seconds": 187.135,
+        "effective_tokens": 55328,
+        "behavior": {
+          "agent_message_count": 7,
+          "command_count": 14,
+          "failed_command_count": 1,
+          "file_change_count": 2,
+          "test_command_count": 8
+        },
+        "error": "BudgetExceededError: token budget exceeded: 55328 > 50000",
+        "run_id": "sympy__sympy-20590--sparse_off--r1--a8e3a76313e0"
+      },
+      "on": {
+        "condition_id": "sparse_on",
+        "metadata": {
+          "families": "when",
+          "documentation_level": "sparse",
+          "instructions": "combined"
+        },
+        "status": "completed",
+        "outcome_kind": "normal_success",
+        "resolved": true,
+        "duration_seconds": 146.683,
+        "effective_tokens": 46227,
+        "behavior": {
+          "agent_message_count": 5,
+          "command_count": 11,
+          "failed_command_count": 3,
+          "file_change_count": 2,
+          "test_command_count": 6
+        },
+        "error": null,
+        "run_id": "sympy__sympy-20590--sparse_on--r1--c5f83e8ea213"
+      }
+    }
+  },
+  "what": {
+    "none": {
+      "condition_id": "full_off",
+      "metadata": {
+        "families": "when,what",
+        "documentation_level": "full",
+        "instructions": "none"
+      },
+      "status": "completed",
+      "outcome_kind": "normal_success",
+      "resolved": true,
+      "duration_seconds": 184.366,
+      "effective_tokens": 37066,
+      "behavior": {
+        "agent_message_count": 6,
+        "command_count": 11,
+        "failed_command_count": 3,
+        "file_change_count": 2,
+        "test_command_count": 3
+      },
+      "error": null,
+      "run_id": "sympy__sympy-20590--full_off--r1--067ef35aca55"
+    },
+    "repo": {
+      "condition_id": "what_repo",
+      "metadata": {
+        "families": "what",
+        "documentation_level": "full",
+        "instructions": "repo"
+      },
+      "status": "completed",
+      "outcome_kind": "normal_success",
+      "resolved": true,
+      "duration_seconds": 134.903,
+      "effective_tokens": 32417,
+      "behavior": {
+        "agent_message_count": 5,
+        "command_count": 10,
+        "failed_command_count": 0,
+        "file_change_count": 2,
+        "test_command_count": 6
+      },
+      "error": null,
+      "run_id": "sympy__sympy-20590--what_repo--r1--218afaa039dc"
+    },
+    "test": {
+      "condition_id": "what_test",
+      "metadata": {
+        "families": "what",
+        "documentation_level": "full",
+        "instructions": "test"
+      },
+      "status": "completed",
+      "outcome_kind": "normal_success",
+      "resolved": true,
+      "duration_seconds": 151.99,
+      "effective_tokens": 43921,
+      "behavior": {
+        "agent_message_count": 6,
+        "command_count": 12,
+        "failed_command_count": 1,
+        "file_change_count": 2,
+        "test_command_count": 6
+      },
+      "error": null,
+      "run_id": "sympy__sympy-20590--what_test--r1--cd73d0b6fea2"
+    },
+    "combined": {
+      "condition_id": "full_on",
+      "metadata": {
+        "families": "when,what",
+        "documentation_level": "full",
+        "instructions": "combined"
+      },
+      "status": "failed",
+      "outcome_kind": "budget_exceeded",
+      "resolved": null,
+      "duration_seconds": 201.167,
+      "effective_tokens": 59535,
+      "behavior": {
+        "agent_message_count": 6,
+        "command_count": 20,
+        "failed_command_count": 2,
+        "file_change_count": 2,
+        "test_command_count": 7
+      },
+      "error": "BudgetExceededError: token budget exceeded: 59535 > 50000",
+      "run_id": "sympy__sympy-20590--full_on--r1--c3626852bd5d"
+    }
+  },
+  "failures": [
+    {
+      "condition_id": "full_on",
+      "metadata": {
+        "families": "when,what",
+        "documentation_level": "full",
+        "instructions": "combined"
+      },
+      "status": "failed",
+      "outcome_kind": "budget_exceeded",
+      "resolved": null,
+      "duration_seconds": 201.167,
+      "effective_tokens": 59535,
+      "behavior": {
+        "agent_message_count": 6,
+        "command_count": 20,
+        "failed_command_count": 2,
+        "file_change_count": 2,
+        "test_command_count": 7
+      },
+      "error": "BudgetExceededError: token budget exceeded: 59535 > 50000",
+      "run_id": "sympy__sympy-20590--full_on--r1--c3626852bd5d"
+    },
+    {
+      "condition_id": "sparse_off",
+      "metadata": {
+        "families": "when",
+        "documentation_level": "sparse",
+        "instructions": "none"
+      },
+      "status": "failed",
+      "outcome_kind": "budget_exceeded",
+      "resolved": null,
+      "duration_seconds": 187.135,
+      "effective_tokens": 55328,
+      "behavior": {
+        "agent_message_count": 7,
+        "command_count": 14,
+        "failed_command_count": 1,
+        "file_change_count": 2,
+        "test_command_count": 8
+      },
+      "error": "BudgetExceededError: token budget exceeded: 55328 > 50000",
+      "run_id": "sympy__sympy-20590--sparse_off--r1--a8e3a76313e0"
+    }
+  ],
+  "runs": [
+    {
+      "condition_id": "full_off",
+      "metadata": {
+        "families": "when,what",
+        "documentation_level": "full",
+        "instructions": "none"
+      },
+      "status": "completed",
+      "outcome_kind": "normal_success",
+      "resolved": true,
+      "duration_seconds": 184.366,
+      "effective_tokens": 37066,
+      "behavior": {
+        "agent_message_count": 6,
+        "command_count": 11,
+        "failed_command_count": 3,
+        "file_change_count": 2,
+        "test_command_count": 3
+      },
+      "error": null,
+      "run_id": "sympy__sympy-20590--full_off--r1--067ef35aca55"
+    },
+    {
+      "condition_id": "full_on",
+      "metadata": {
+        "families": "when,what",
+        "documentation_level": "full",
+        "instructions": "combined"
+      },
+      "status": "failed",
+      "outcome_kind": "budget_exceeded",
+      "resolved": null,
+      "duration_seconds": 201.167,
+      "effective_tokens": 59535,
+      "behavior": {
+        "agent_message_count": 6,
+        "command_count": 20,
+        "failed_command_count": 2,
+        "file_change_count": 2,
+        "test_command_count": 7
+      },
+      "error": "BudgetExceededError: token budget exceeded: 59535 > 50000",
+      "run_id": "sympy__sympy-20590--full_on--r1--c3626852bd5d"
+    },
+    {
+      "condition_id": "partial_off",
+      "metadata": {
+        "families": "when",
+        "documentation_level": "partial",
+        "instructions": "none"
+      },
+      "status": "completed",
+      "outcome_kind": "normal_success",
+      "resolved": true,
+      "duration_seconds": 211.437,
+      "effective_tokens": 34514,
+      "behavior": {
+        "agent_message_count": 6,
+        "command_count": 11,
+        "failed_command_count": 2,
+        "file_change_count": 1,
+        "test_command_count": 7
+      },
+      "error": null,
+      "run_id": "sympy__sympy-20590--partial_off--r1--c6306df4a157"
+    },
+    {
+      "condition_id": "partial_on",
+      "metadata": {
+        "families": "when",
+        "documentation_level": "partial",
+        "instructions": "combined"
+      },
+      "status": "completed",
+      "outcome_kind": "normal_success",
+      "resolved": true,
+      "duration_seconds": 121.569,
+      "effective_tokens": 27389,
+      "behavior": {
+        "agent_message_count": 4,
+        "command_count": 8,
+        "failed_command_count": 2,
+        "file_change_count": 2,
+        "test_command_count": 4
+      },
+      "error": null,
+      "run_id": "sympy__sympy-20590--partial_on--r1--077b0697b1c9"
+    },
+    {
+      "condition_id": "sparse_off",
+      "metadata": {
+        "families": "when",
+        "documentation_level": "sparse",
+        "instructions": "none"
+      },
+      "status": "failed",
+      "outcome_kind": "budget_exceeded",
+      "resolved": null,
+      "duration_seconds": 187.135,
+      "effective_tokens": 55328,
+      "behavior": {
+        "agent_message_count": 7,
+        "command_count": 14,
+        "failed_command_count": 1,
+        "file_change_count": 2,
+        "test_command_count": 8
+      },
+      "error": "BudgetExceededError: token budget exceeded: 55328 > 50000",
+      "run_id": "sympy__sympy-20590--sparse_off--r1--a8e3a76313e0"
+    },
+    {
+      "condition_id": "sparse_on",
+      "metadata": {
+        "families": "when",
+        "documentation_level": "sparse",
+        "instructions": "combined"
+      },
+      "status": "completed",
+      "outcome_kind": "normal_success",
+      "resolved": true,
+      "duration_seconds": 146.683,
+      "effective_tokens": 46227,
+      "behavior": {
+        "agent_message_count": 5,
+        "command_count": 11,
+        "failed_command_count": 3,
+        "file_change_count": 2,
+        "test_command_count": 6
+      },
+      "error": null,
+      "run_id": "sympy__sympy-20590--sparse_on--r1--c5f83e8ea213"
+    },
+    {
+      "condition_id": "what_repo",
+      "metadata": {
+        "families": "what",
+        "documentation_level": "full",
+        "instructions": "repo"
+      },
+      "status": "completed",
+      "outcome_kind": "normal_success",
+      "resolved": true,
+      "duration_seconds": 134.903,
+      "effective_tokens": 32417,
+      "behavior": {
+        "agent_message_count": 5,
+        "command_count": 10,
+        "failed_command_count": 0,
+        "file_change_count": 2,
+        "test_command_count": 6
+      },
+      "error": null,
+      "run_id": "sympy__sympy-20590--what_repo--r1--218afaa039dc"
+    },
+    {
+      "condition_id": "what_test",
+      "metadata": {
+        "families": "what",
+        "documentation_level": "full",
+        "instructions": "test"
+      },
+      "status": "completed",
+      "outcome_kind": "normal_success",
+      "resolved": true,
+      "duration_seconds": 151.99,
+      "effective_tokens": 43921,
+      "behavior": {
+        "agent_message_count": 6,
+        "command_count": 12,
+        "failed_command_count": 1,
+        "file_change_count": 2,
+        "test_command_count": 6
+      },
+      "error": null,
+      "run_id": "sympy__sympy-20590--what_test--r1--cd73d0b6fea2"
+    }
+  ],
+  "interpretation": "One task and one repetition are an engineering pilot, not evidence of a causal AGENTS.md effect. Budget-exceeded runs are missing evaluator outcomes, not unresolved patches."
+}

@@ -1,0 +1,24 @@
+{
+  "experiment_id": "week4-when-main-12x6x2",
+  "manifest": "/Users/cerin/Desktop/4-1/11-12_cerin/experiments/week4-when-main.yaml",
+  "seed": 1112,
+  "tasks": 12,
+  "conditions": 6,
+  "repetitions": 2,
+  "runs": 144,
+  "budget": {
+    "requested": {
+      "runs": 144,
+      "effective_tokens": 7200000,
+      "wall_seconds": 561600
+    },
+    "allowed": {
+      "runs": 144,
+      "effective_tokens": 7200000,
+      "wall_seconds": 561600
+    },
+    "within_budget": true,
+    "violations": {}
+  },
+  "plan_jsonl": "/Users/cerin/Desktop/4-1/11-12_cerin/plans/week4-when-main-12x6x2.jsonl"
+}

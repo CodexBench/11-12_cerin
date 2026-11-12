@@ -1,0 +1,10 @@
+Added `__slots__ = ()` to [`Printable`](/Users/cerin/Desktop/4-1/11-12_cerin/runs/week4-pilot/sympy__sympy-20590--partial_off--r1--c6306df4a157/workspace/sympy/core/_print_helpers.py:20), removing the inherited `__dict__` from `Symbol` and other slotted `Basic` subclasses.
+
+Validation:
+
+- `Symbol('s').__dict__` now raises `AttributeError`
+- Core `Basic`/`Symbol` tests: 34 passed
+- String-printing tests: 94 passed
+- `git diff --check`: clean
+
+The three pre-existing deleted documentation files were left untouched.

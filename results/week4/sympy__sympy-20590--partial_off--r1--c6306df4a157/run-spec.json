@@ -1,0 +1,42 @@
+{
+  "experiment_id": "week4-when-what-pilot-1x8",
+  "prompt_version": "week4-v1",
+  "task": {
+    "id": "sympy__sympy-20590",
+    "dataset": "verified",
+    "repo": "sympy/sympy",
+    "base_commit": "cffd4e0f86fefd4802349a9f9b19ed70934ea354",
+    "image": "swebench/sweb.eval.x86_64.sympy_1776_sympy-20590:latest",
+    "image_platform": "linux/amd64"
+  },
+  "condition": {
+    "id": "partial_off",
+    "label": "Partial repository docs, no AGENTS.md",
+    "documents": [],
+    "hide_paths": [
+      "CONTRIBUTING.md",
+      "PULL_REQUEST_TEMPLATE.md",
+      "CODE_OF_CONDUCT.md"
+    ],
+    "metadata": {
+      "families": "when",
+      "documentation_level": "partial",
+      "instructions": "none"
+    }
+  },
+  "runtime": {
+    "model": "gpt-5.6-sol",
+    "reasoning_effort": "high",
+    "token_budget": 50000,
+    "agent_timeout_seconds": 1800,
+    "evaluator_timeout_seconds": 1800,
+    "codex_cli": "codex",
+    "swebench_cli": ".venv/bin/swebench",
+    "task_repo": "swe-bench-tasks",
+    "results_dir": "runs/week4-pilot",
+    "database": "runs/week4-pilot/results.sqlite3",
+    "billing_mode": "chatgpt_subscription"
+  },
+  "repetition": 1,
+  "condition_digest": "afe30e35fbc57223b1fd4dc596b63963336618b1f56be4267aece5a823c3c168"
+}

@@ -1,0 +1,24 @@
+{
+  "experiment_id": "week4-when-what-pilot-1x8",
+  "manifest": "/Users/cerin/Desktop/4-1/11-12_cerin/experiments/week4-pilot.yaml",
+  "seed": 1112,
+  "tasks": 1,
+  "conditions": 8,
+  "repetitions": 1,
+  "runs": 8,
+  "budget": {
+    "requested": {
+      "runs": 8,
+      "effective_tokens": 400000,
+      "wall_seconds": 31200
+    },
+    "allowed": {
+      "runs": 8,
+      "effective_tokens": 400000,
+      "wall_seconds": 31200
+    },
+    "within_budget": true,
+    "violations": {}
+  },
+  "plan_jsonl": "/Users/cerin/Desktop/4-1/11-12_cerin/plans/week4-when-what-pilot-1x8.jsonl"
+}

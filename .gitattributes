@@ -1,0 +1,4 @@
+* text=auto whitespace=-blank-at-eof
+
+# Raw agent patches and evaluator logs are immutable evidence. Preserve them byte-for-byte.
+results/** -whitespace

@@ -1,0 +1,12 @@
+Fixed the `Symbol.__dict__` regression.
+
+Changes:
+
+- Added `__slots__ = ()` to `Printable`, preventing `Basic` subclasses from inheriting an instance dictionary.
+- Added a regression test confirming `Symbol.__dict__` raises `AttributeError`.
+
+Validation:
+
+- `test_symbol.py`: 12 passed
+- `test_basic.py` + `test_boolalg.py`: 91 passed, 1 skipped, 1 expected failure
+- `git diff --check`: clean

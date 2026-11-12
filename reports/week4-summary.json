@@ -1,0 +1,210 @@
+{
+  "generated_at": "2026-11-12T10:05:55.473+00:00",
+  "experiment_id": "week4-when-what-pilot-1x8",
+  "expected_runs": 8,
+  "stored_runs": 8,
+  "complete_matrix": false,
+  "billing_mode": "chatgpt_subscription",
+  "cost_note": "Monetary cost is N/A because ChatGPT subscription usage is not equivalent to API token pricing.",
+  "overall": {
+    "runs": 8,
+    "completed": 6,
+    "resolved": 6,
+    "resolved_rate": 1.0,
+    "average_duration_seconds": 167.406,
+    "average_budget_tokens": 42049.625,
+    "average_estimated_cost_usd": null,
+    "outcomes": {
+      "budget_exceeded": 2,
+      "normal_success": 6
+    }
+  },
+  "by_condition": {
+    "full_off": {
+      "runs": 1,
+      "completed": 1,
+      "resolved": 1,
+      "resolved_rate": 1.0,
+      "average_duration_seconds": 184.366,
+      "average_budget_tokens": 37066.0,
+      "average_estimated_cost_usd": null,
+      "outcomes": {
+        "normal_success": 1
+      }
+    },
+    "full_on": {
+      "runs": 1,
+      "completed": 0,
+      "resolved": 0,
+      "resolved_rate": null,
+      "average_duration_seconds": 201.167,
+      "average_budget_tokens": 59535.0,
+      "average_estimated_cost_usd": null,
+      "outcomes": {
+        "budget_exceeded": 1
+      }
+    },
+    "partial_off": {
+      "runs": 1,
+      "completed": 1,
+      "resolved": 1,
+      "resolved_rate": 1.0,
+      "average_duration_seconds": 211.437,
+      "average_budget_tokens": 34514.0,
+      "average_estimated_cost_usd": null,
+      "outcomes": {
+        "normal_success": 1
+      }
+    },
+    "partial_on": {
+      "runs": 1,
+      "completed": 1,
+      "resolved": 1,
+      "resolved_rate": 1.0,
+      "average_duration_seconds": 121.569,
+      "average_budget_tokens": 27389.0,
+      "average_estimated_cost_usd": null,
+      "outcomes": {
+        "normal_success": 1
+      }
+    },
+    "sparse_off": {
+      "runs": 1,
+      "completed": 0,
+      "resolved": 0,
+      "resolved_rate": null,
+      "average_duration_seconds": 187.135,
+      "average_budget_tokens": 55328.0,
+      "average_estimated_cost_usd": null,
+      "outcomes": {
+        "budget_exceeded": 1
+      }
+    },
+    "sparse_on": {
+      "runs": 1,
+      "completed": 1,
+      "resolved": 1,
+      "resolved_rate": 1.0,
+      "average_duration_seconds": 146.683,
+      "average_budget_tokens": 46227.0,
+      "average_estimated_cost_usd": null,
+      "outcomes": {
+        "normal_success": 1
+      }
+    },
+    "what_repo": {
+      "runs": 1,
+      "completed": 1,
+      "resolved": 1,
+      "resolved_rate": 1.0,
+      "average_duration_seconds": 134.903,
+      "average_budget_tokens": 32417.0,
+      "average_estimated_cost_usd": null,
+      "outcomes": {
+        "normal_success": 1
+      }
+    },
+    "what_test": {
+      "runs": 1,
+      "completed": 1,
+      "resolved": 1,
+      "resolved_rate": 1.0,
+      "average_duration_seconds": 151.99,
+      "average_budget_tokens": 43921.0,
+      "average_estimated_cost_usd": null,
+      "outcomes": {
+        "normal_success": 1
+      }
+    }
+  },
+  "runs": [
+    {
+      "run_id": "sympy__sympy-20590--full_off--r1--067ef35aca55",
+      "task_id": "sympy__sympy-20590",
+      "condition_id": "full_off",
+      "status": "completed",
+      "outcome_kind": "normal_success",
+      "resolved": true,
+      "duration_seconds": 184.366,
+      "budget_tokens": 37066,
+      "run_dir": "/Users/cerin/Desktop/4-1/11-12_cerin/runs/week4-pilot/sympy__sympy-20590--full_off--r1--067ef35aca55"
+    },
+    {
+      "run_id": "sympy__sympy-20590--full_on--r1--c3626852bd5d",
+      "task_id": "sympy__sympy-20590",
+      "condition_id": "full_on",
+      "status": "failed",
+      "outcome_kind": "budget_exceeded",
+      "resolved": null,
+      "duration_seconds": 201.167,
+      "budget_tokens": 59535,
+      "run_dir": "/Users/cerin/Desktop/4-1/11-12_cerin/runs/week4-pilot/sympy__sympy-20590--full_on--r1--c3626852bd5d"
+    },
+    {
+      "run_id": "sympy__sympy-20590--partial_off--r1--c6306df4a157",
+      "task_id": "sympy__sympy-20590",
+      "condition_id": "partial_off",
+      "status": "completed",
+      "outcome_kind": "normal_success",
+      "resolved": true,
+      "duration_seconds": 211.437,
+      "budget_tokens": 34514,
+      "run_dir": "/Users/cerin/Desktop/4-1/11-12_cerin/runs/week4-pilot/sympy__sympy-20590--partial_off--r1--c6306df4a157"
+    },
+    {
+      "run_id": "sympy__sympy-20590--partial_on--r1--077b0697b1c9",
+      "task_id": "sympy__sympy-20590",
+      "condition_id": "partial_on",
+      "status": "completed",
+      "outcome_kind": "normal_success",
+      "resolved": true,
+      "duration_seconds": 121.569,
+      "budget_tokens": 27389,
+      "run_dir": "/Users/cerin/Desktop/4-1/11-12_cerin/runs/week4-pilot/sympy__sympy-20590--partial_on--r1--077b0697b1c9"
+    },
+    {
+      "run_id": "sympy__sympy-20590--sparse_off--r1--a8e3a76313e0",
+      "task_id": "sympy__sympy-20590",
+      "condition_id": "sparse_off",
+      "status": "failed",
+      "outcome_kind": "budget_exceeded",
+      "resolved": null,
+      "duration_seconds": 187.135,
+      "budget_tokens": 55328,
+      "run_dir": "/Users/cerin/Desktop/4-1/11-12_cerin/runs/week4-pilot/sympy__sympy-20590--sparse_off--r1--a8e3a76313e0"
+    },
+    {
+      "run_id": "sympy__sympy-20590--sparse_on--r1--c5f83e8ea213",
+      "task_id": "sympy__sympy-20590",
+      "condition_id": "sparse_on",
+      "status": "completed",
+      "outcome_kind": "normal_success",
+      "resolved": true,
+      "duration_seconds": 146.683,
+      "budget_tokens": 46227,
+      "run_dir": "/Users/cerin/Desktop/4-1/11-12_cerin/runs/week4-pilot/sympy__sympy-20590--sparse_on--r1--c5f83e8ea213"
+    },
+    {
+      "run_id": "sympy__sympy-20590--what_repo--r1--218afaa039dc",
+      "task_id": "sympy__sympy-20590",
+      "condition_id": "what_repo",
+      "status": "completed",
+      "outcome_kind": "normal_success",
+      "resolved": true,
+      "duration_seconds": 134.903,
+      "budget_tokens": 32417,
+      "run_dir": "/Users/cerin/Desktop/4-1/11-12_cerin/runs/week4-pilot/sympy__sympy-20590--what_repo--r1--218afaa039dc"
+    },
+    {
+      "run_id": "sympy__sympy-20590--what_test--r1--cd73d0b6fea2",
+      "task_id": "sympy__sympy-20590",
+      "condition_id": "what_test",
+      "status": "completed",
+      "outcome_kind": "normal_success",
+      "resolved": true,
+      "duration_seconds": 151.99,
+      "budget_tokens": 43921,
+      "run_dir": "/Users/cerin/Desktop/4-1/11-12_cerin/runs/week4-pilot/sympy__sympy-20590--what_test--r1--cd73d0b6fea2"
+    }
+  ]
+}

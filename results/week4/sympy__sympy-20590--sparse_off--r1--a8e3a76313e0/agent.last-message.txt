@@ -1,0 +1,13 @@
+Fixed the `Symbol.__dict__` regression.
+
+- Added `__slots__ = ()` to the stateless [`Printable` mixin](/Users/cerin/Desktop/4-1/11-12_cerin/runs/week4-pilot/sympy__sympy-20590--sparse_off--r1--a8e3a76313e0/workspace/sympy/core/_print_helpers.py:20).
+- Added a [`Symbol` regression test](/Users/cerin/Desktop/4-1/11-12_cerin/runs/week4-pilot/sympy__sympy-20590--sparse_off--r1--a8e3a76313e0/workspace/sympy/core/tests/test_symbol.py:38).
+
+Validation:
+
+- Symbol tests: 13 passed.
+- Basic and printing tests: 269 passed, 2 expected failures.
+- Full core suite: 1,673 passed; unrelated exceptions remain from incompatible installed SciPy/NumPy versions.
+- `git diff --check` passed.
+
+Pre-existing deleted documentation/workflow files were left untouched.

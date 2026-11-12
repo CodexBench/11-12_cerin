@@ -1,0 +1,9 @@
+Fixed the regression by adding `__slots__ = ()` to [Printable](/Users/cerin/Desktop/4-1/11-12_cerin/runs/week4-pilot/sympy__sympy-20590--what_test--r1--cd73d0b6fea2/workspace/sympy/core/_print_helpers.py:20), preventing its `Basic` subclasses from acquiring `__dict__`.
+
+Added a focused [Symbol regression test](/Users/cerin/Desktop/4-1/11-12_cerin/runs/week4-pilot/sympy__sympy-20590--what_test--r1--cd73d0b6fea2/workspace/sympy/core/tests/test_symbol.py:39).
+
+Tests:
+
+- `test_symbol.py`: 13 passed
+- `test_basic.py`: 22 passed
+- `git diff --check`: passed

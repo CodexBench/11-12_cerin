@@ -1,0 +1,58 @@
+schema_version: 1
+experiment_id: week4-when-main-12x6x2
+prompt_version: week4-v1
+repetitions: 2
+seed: 1112
+
+runtime:
+  model: gpt-5.6-sol
+  reasoning_effort: high
+  token_budget: 50000
+  agent_timeout_seconds: 1800
+  evaluator_timeout_seconds: 1800
+  codex_cli: codex
+  swebench_cli: .venv/bin/swebench
+  task_repo: swe-bench-tasks
+  results_dir: runs/week4-when-main
+  database: runs/week4-when-main/results.sqlite3
+  billing_mode: chatgpt_subscription
+
+execution_budget:
+  max_runs: 144
+  max_effective_tokens: 7200000
+  max_wall_seconds: 561600
+
+tasks:
+  - {id: sympy__sympy-19254, dataset: verified, repo: sympy/sympy, base_commit: e0ef1da13e2ab2a77866c05246f73c871ca9388c, image: "swebench/sweb.eval.x86_64.sympy_1776_sympy-19254:latest", image_platform: linux/amd64}
+  - {id: sympy__sympy-19346, dataset: verified, repo: sympy/sympy, base_commit: 94fb720696f5f5d12bad8bc813699fd696afd2fb, image: "swebench/sweb.eval.x86_64.sympy_1776_sympy-19346:latest", image_platform: linux/amd64}
+  - {id: sympy__sympy-19637, dataset: verified, repo: sympy/sympy, base_commit: 63f8f465d48559fecb4e4bf3c48b75bf15a3e0ef, image: "swebench/sweb.eval.x86_64.sympy_1776_sympy-19637:latest", image_platform: linux/amd64}
+  - {id: sympy__sympy-19713, dataset: verified, repo: sympy/sympy, base_commit: b1078cd096aa891ebadf5d941ab83268f8b03a80, image: "swebench/sweb.eval.x86_64.sympy_1776_sympy-19713:latest", image_platform: linux/amd64}
+  - {id: sympy__sympy-20212, dataset: verified, repo: sympy/sympy, base_commit: a106f4782a9dbe7f8fd16030f15401d977e03ae9, image: "swebench/sweb.eval.x86_64.sympy_1776_sympy-20212:latest", image_platform: linux/amd64}
+  - {id: sympy__sympy-20565, dataset: verified, repo: sympy/sympy, base_commit: 7813fc7f409838fe4c317321fd11c285a98b4ceb, image: "swebench/sweb.eval.x86_64.sympy_1776_sympy-20565:latest", image_platform: linux/amd64}
+  - {id: sympy__sympy-20590, dataset: verified, repo: sympy/sympy, base_commit: cffd4e0f86fefd4802349a9f9b19ed70934ea354, image: "swebench/sweb.eval.x86_64.sympy_1776_sympy-20590:latest", image_platform: linux/amd64}
+  - {id: sympy__sympy-20639, dataset: verified, repo: sympy/sympy, base_commit: eb926a1d0c1158bf43f01eaf673dc84416b5ebb1, image: "swebench/sweb.eval.x86_64.sympy_1776_sympy-20639:latest", image_platform: linux/amd64}
+  - {id: sympy__sympy-20801, dataset: verified, repo: sympy/sympy, base_commit: e11d3fed782146eebbffdc9ced0364b223b84b6c, image: "swebench/sweb.eval.x86_64.sympy_1776_sympy-20801:latest", image_platform: linux/amd64}
+  - {id: sympy__sympy-20916, dataset: verified, repo: sympy/sympy, base_commit: 82298df6a51491bfaad0c6d1980e7e3ca808ae93, image: "swebench/sweb.eval.x86_64.sympy_1776_sympy-20916:latest", image_platform: linux/amd64}
+  - {id: sympy__sympy-21055, dataset: verified, repo: sympy/sympy, base_commit: 748ce73479ee2cd5c861431091001cc18943c735, image: "swebench/sweb.eval.x86_64.sympy_1776_sympy-21055:latest", image_platform: linux/amd64}
+  - {id: sympy__sympy-21208, dataset: verified, repo: sympy/sympy, base_commit: f9badb21b01f4f52ce4d545d071086ee650cd282, image: "swebench/sweb.eval.x86_64.sympy_1776_sympy-21208:latest", image_platform: linux/amd64}
+
+conditions:
+  - {id: full_off, label: "Full docs / OFF", metadata: {family: when, documentation_level: full, instructions: none}, documents: [], hide_paths: []}
+  - id: full_on
+    label: Full docs / ON
+    metadata: {family: when, documentation_level: full, instructions: combined}
+    documents: [{source: ../instructions/combined/AGENTS.md, destination: AGENTS.md}]
+    hide_paths: []
+  - {id: partial_off, label: "Partial docs / OFF", metadata: {family: when, documentation_level: partial, instructions: none}, documents: [], hide_paths: [CONTRIBUTING.md, PULL_REQUEST_TEMPLATE.md, CODE_OF_CONDUCT.md]}
+  - id: partial_on
+    label: Partial docs / ON
+    metadata: {family: when, documentation_level: partial, instructions: combined}
+    documents: [{source: ../instructions/combined/AGENTS.md, destination: AGENTS.md}]
+    hide_paths: [CONTRIBUTING.md, PULL_REQUEST_TEMPLATE.md, CODE_OF_CONDUCT.md]
+  - {id: sparse_off, label: "Sparse docs / OFF", metadata: {family: when, documentation_level: sparse, instructions: none}, documents: [], hide_paths: [CONTRIBUTING.md, PULL_REQUEST_TEMPLATE.md, CODE_OF_CONDUCT.md, README.md, doc/README.rst, .github]}
+  - id: sparse_on
+    label: Sparse docs / ON
+    metadata: {family: when, documentation_level: sparse, instructions: combined}
+    documents: [{source: ../instructions/combined/AGENTS.md, destination: AGENTS.md}]
+    hide_paths: [CONTRIBUTING.md, PULL_REQUEST_TEMPLATE.md, CODE_OF_CONDUCT.md, README.md, doc/README.rst, .github]
+

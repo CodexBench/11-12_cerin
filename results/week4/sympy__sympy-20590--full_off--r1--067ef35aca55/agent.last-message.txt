@@ -1,0 +1,11 @@
+Fixed the `Symbol.__dict__` regression.
+
+- Added `__slots__ = ()` to [`Printable`](/Users/cerin/Desktop/4-1/11-12_cerin/runs/week4-pilot/sympy__sympy-20590--full_off--r1--067ef35aca55/workspace/sympy/core/_print_helpers.py:20), preventing it from introducing instance dictionaries into `Basic` subclasses.
+- Added a regression assertion for `Symbol` in [`test_symbol.py`](/Users/cerin/Desktop/4-1/11-12_cerin/runs/week4-pilot/sympy__sympy-20590--full_off--r1--067ef35aca55/workspace/sympy/core/tests/test_symbol.py:36).
+
+Validation:
+
+- Changed files compile successfully.
+- Slot-layout check confirms Symbol-equivalent instances have no `__dict__`.
+- `git diff --check` passes.
+- Full focused test execution was blocked because the environment lacks `pytest` and `mpmath`.

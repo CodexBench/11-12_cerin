@@ -1,0 +1,13 @@
+Implemented the root-cause fix:
+
+- Added `__slots__ = ()` to [Printable](/Users/cerin/Desktop/4-1/11-12_cerin/runs/week4-pilot/sympy__sympy-20590--sparse_on--r1--c5f83e8ea213/workspace/sympy/core/_print_helpers.py:20), preventing it from introducing `__dict__` into slotted subclasses such as `Basic` and `Symbol`.
+- Added a focused regression assertion in [test_symbol.py](/Users/cerin/Desktop/4-1/11-12_cerin/runs/week4-pilot/sympy__sympy-20590--sparse_on--r1--c5f83e8ea213/workspace/sympy/core/tests/test_symbol.py:17).
+
+Validation:
+
+- Python syntax compilation passed.
+- Isolated `Symbol`-equivalent inheritance/slot check passed.
+- `git diff --check` passed.
+- Focused repository test was attempted but could not start because `mpmath` is unavailable in the environment.
+
+Unrelated pre-existing sparse-checkout changes were left untouched.

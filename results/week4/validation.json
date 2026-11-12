@@ -1,0 +1,25 @@
+{
+  "status": "ready",
+  "timestamp": "2026-11-12T09:36:58.239+00:00",
+  "errors": [],
+  "warnings": [
+    "Docker memory is below 12 GiB; prebuilt images are required"
+  ],
+  "paths": {
+    "project_root": "/Users/cerin/Desktop/4-1/11-12_cerin",
+    "manifest": "/Users/cerin/Desktop/4-1/11-12_cerin/experiments/week4-pilot.yaml",
+    "codex_cli": "/Applications/ChatGPT.app/Contents/Resources/codex-cli/CodexCLI.app/Contents/MacOS/codex",
+    "swebench_cli": "/Users/cerin/Desktop/4-1/SWE-bench/.venv/bin/swebench",
+    "task_repo": "/Users/cerin/Desktop/4-1/SWE-bench/swe-bench-tasks",
+    "results_dir": "/Users/cerin/Desktop/4-1/11-12_cerin/runs/week4-pilot",
+    "database": "/Users/cerin/Desktop/4-1/11-12_cerin/runs/week4-pilot/results.sqlite3"
+  },
+  "images": [
+    {
+      "task_id": "sympy__sympy-20590",
+      "image": "swebench/sweb.eval.x86_64.sympy_1776_sympy-20590:latest",
+      "id": "sha256:3a282752833ce34730ee0621e22033501c993f45742775ca57f04c9ff27178a0",
+      "architecture": "amd64"
+    }
+  ]
+}

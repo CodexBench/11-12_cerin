@@ -1,0 +1,10 @@
+Fixed the regression by adding `__slots__ = ()` to [Printable](/Users/cerin/Desktop/4-1/11-12_cerin/runs/week4-pilot/sympy__sympy-20590--full_on--r1--c3626852bd5d/workspace/sympy/core/_print_helpers.py:20). Its missing slots had introduced `__dict__` into every `Basic` subclass, including `Symbol`.
+
+Added regression coverage in [test_symbol.py](/Users/cerin/Desktop/4-1/11-12_cerin/runs/week4-pilot/sympy__sympy-20590--full_on--r1--c3626852bd5d/workspace/sympy/core/tests/test_symbol.py:36).
+
+Validation:
+
+- Focused symbol/basic suites: 34 passed
+- Broader core suite: 1,672 passed; unrelated exceptions came from incompatible installed SciPy/NumPy versions
+- `git diff --check`: clean
+- Preserved the pre-existing untracked `AGENTS.md` file; no commit created.

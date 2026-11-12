@@ -1,0 +1,13 @@
+Fixed the `Symbol.__dict__` regression.
+
+- Added `__slots__ = ()` to [`Printable`](/Users/cerin/Desktop/4-1/11-12_cerin/runs/week4-pilot/sympy__sympy-20590--partial_on--r1--077b0697b1c9/workspace/sympy/core/_print_helpers.py:21), the unslotted ancestor that introduced instance dictionaries.
+- Added a focused regression assertion in [`test_symbol.py`](/Users/cerin/Desktop/4-1/11-12_cerin/runs/week4-pilot/sympy__sympy-20590--partial_on--r1--077b0697b1c9/workspace/sympy/core/tests/test_symbol.py:27).
+
+Validation:
+
+- Independent slot-hierarchy check passed.
+- Python compilation passed.
+- `git diff --check` passed.
+- Focused SymPy test could not collect because host dependency `mpmath` is unavailable.
+
+Pre-existing deletions and `AGENTS.md` remain untouched.

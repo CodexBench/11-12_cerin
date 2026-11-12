@@ -1,0 +1,84 @@
+schema_version: 1
+experiment_id: week4-when-what-pilot-1x8
+prompt_version: week4-v1
+repetitions: 1
+seed: 1112
+
+runtime:
+  model: gpt-5.6-sol
+  reasoning_effort: high
+  token_budget: 50000
+  agent_timeout_seconds: 1800
+  evaluator_timeout_seconds: 1800
+  codex_cli: codex
+  swebench_cli: .venv/bin/swebench
+  task_repo: swe-bench-tasks
+  results_dir: runs/week4-pilot
+  database: runs/week4-pilot/results.sqlite3
+  billing_mode: chatgpt_subscription
+
+execution_budget:
+  max_runs: 8
+  max_effective_tokens: 400000
+  max_wall_seconds: 31200
+
+tasks:
+  - id: sympy__sympy-20590
+    dataset: verified
+    repo: sympy/sympy
+    base_commit: cffd4e0f86fefd4802349a9f9b19ed70934ea354
+    image: swebench/sweb.eval.x86_64.sympy_1776_sympy-20590:latest
+    image_platform: linux/amd64
+
+conditions:
+  - id: full_off
+    label: Full repository docs, no AGENTS.md
+    metadata: {families: "when,what", documentation_level: full, instructions: none}
+    documents: []
+    hide_paths: []
+  - id: full_on
+    label: Full repository docs, combined AGENTS.md
+    metadata: {families: "when,what", documentation_level: full, instructions: combined}
+    documents:
+      - source: ../instructions/combined/AGENTS.md
+        destination: AGENTS.md
+    hide_paths: []
+  - id: partial_off
+    label: Partial repository docs, no AGENTS.md
+    metadata: {families: when, documentation_level: partial, instructions: none}
+    documents: []
+    hide_paths: [CONTRIBUTING.md, PULL_REQUEST_TEMPLATE.md, CODE_OF_CONDUCT.md]
+  - id: partial_on
+    label: Partial repository docs, combined AGENTS.md
+    metadata: {families: when, documentation_level: partial, instructions: combined}
+    documents:
+      - source: ../instructions/combined/AGENTS.md
+        destination: AGENTS.md
+    hide_paths: [CONTRIBUTING.md, PULL_REQUEST_TEMPLATE.md, CODE_OF_CONDUCT.md]
+  - id: sparse_off
+    label: Sparse repository docs, no AGENTS.md
+    metadata: {families: when, documentation_level: sparse, instructions: none}
+    documents: []
+    hide_paths: [CONTRIBUTING.md, PULL_REQUEST_TEMPLATE.md, CODE_OF_CONDUCT.md, README.md, doc/README.rst, .github]
+  - id: sparse_on
+    label: Sparse repository docs, combined AGENTS.md
+    metadata: {families: when, documentation_level: sparse, instructions: combined}
+    documents:
+      - source: ../instructions/combined/AGENTS.md
+        destination: AGENTS.md
+    hide_paths: [CONTRIBUTING.md, PULL_REQUEST_TEMPLATE.md, CODE_OF_CONDUCT.md, README.md, doc/README.rst, .github]
+  - id: what_repo
+    label: Full repository docs, repository guide only
+    metadata: {families: what, documentation_level: full, instructions: repo}
+    documents:
+      - source: ../instructions/repo/AGENTS.md
+        destination: AGENTS.md
+    hide_paths: []
+  - id: what_test
+    label: Full repository docs, test guide only
+    metadata: {families: what, documentation_level: full, instructions: test}
+    documents:
+      - source: ../instructions/test/AGENTS.md
+        destination: AGENTS.md
+    hide_paths: []
+

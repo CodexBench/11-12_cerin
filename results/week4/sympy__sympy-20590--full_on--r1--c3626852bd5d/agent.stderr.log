@@ -1,0 +1,6 @@
+Reading additional input from stdin...
+2026-11-12T09:41:36.188287Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-11-12T09:41:36.241833Z ERROR codex_core::session::session: failed to load skill /Users/cerin/.agents/skills/azure-app-onboard/deploy/SKILL.md: missing YAML frontmatter delimited by ---
+2026-11-12T09:41:36.241852Z ERROR codex_core::session::session: failed to load skill /Users/cerin/.agents/skills/azure-app-onboard/prepare/SKILL.md: missing YAML frontmatter delimited by ---
+2026-11-12T09:41:36.241855Z ERROR codex_core::session::session: failed to load skill /Users/cerin/.agents/skills/azure-app-onboard/scaffold/SKILL.md: missing YAML frontmatter delimited by ---
+2026-11-12T09:41:42.979065Z ERROR codex_core::tools::router: error=Goal tools require a persistent thread.
